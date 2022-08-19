@@ -6,7 +6,7 @@ SRC := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ := $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 VALFLAGS := -v --track-origins=yes --show-reachable=yes --leak-check=full
-CXXFLAGS := -std=c++17 -Wall -pedantic -Iinclude -MMD -MP
+CXXFLAGS := -std=c++17 -Wall -pedantic -Iinclude -MMD -MP -fopenmp
 LDFLAGS := $(shell pkg-config --cflags opencv) -Llib 
 LDLIBS := -lm $(shell pkg-config --libs opencv)
 
