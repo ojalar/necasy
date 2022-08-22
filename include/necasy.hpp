@@ -35,6 +35,9 @@ public:
     // destructor
     ~Necasy() {};
     */
+    void Update();
+    void Capture();
+    void Process() {;};
 
 private:
     /**

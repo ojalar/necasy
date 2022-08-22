@@ -1,3 +1,1 @@
-asd
-ads
-sad
+rtsp://rtsp.stream/pattern

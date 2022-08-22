@@ -19,3 +19,18 @@ Necasy::Necasy(std::string camera_path)
     camera_file.close();  
 }
 
+void Necasy::Update() {
+    try {
+        // capture frames from each camera
+        this->Capture();
+        // process the latest frames
+        this->Process();
+    }
+    catch (...) {
+        std::cout << "An error occured during processing the camera feeds";;
+    }
+}
+
+void Necasy::Capture() {
+    
+}
