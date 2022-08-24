@@ -13,11 +13,13 @@
 
 class Camera {
 public:
-    Camera(std::string stream)
-    : stream_(stream) {}; 
-    
-
+    Camera(std::string stream, unsigned int id);
+ 
+    void Capture();
 
 private:
     std::string stream_;
+    unsigned int id_;
+    cv::Mat frame_;
+    cv::VideoCapture cap_;
 };

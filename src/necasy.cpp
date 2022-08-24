@@ -12,25 +12,26 @@ Necasy::Necasy(std::string camera_path)
     }
     // read each stream address row by row
     std::string stream_address;
+    unsigned int id = 0;
     while (getline(camera_file, stream_address)) {
         std::cout << "Read camera stream: " << stream_address << '\n';
-        cameras_.push_back(std::make_shared<Camera>(stream_address));
+        cameras_.push_back(std::make_shared<Camera>(stream_address, id));
+        id++;
     }
     camera_file.close();  
 }
 
 void Necasy::Update() {
-    try {
-        // capture frames from each camera
-        this->Capture();
-        // process the latest frames
-        this->Process();
-    }
-    catch (...) {
-        std::cout << "An error occured during processing the camera feeds";;
-    }
+    // capture frames from each camera
+    this->Capture();
+    // process the latest frames
+    this->Process();
 }
 
 void Necasy::Capture() {
-    
+    // parallel loop through cameras, acquire new frame from each
+    #pragma omp parallel for
+    for (std::size_t i = 0; i < cameras_.size(); i++) {
+        cameras_[i]->Capture();
+    }    
 }
