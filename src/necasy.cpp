@@ -10,11 +10,17 @@ Necasy::Necasy(std::string camera_path)
     if (!camera_file) {
         std::cerr << "Could not read camera stream file\n";
     }
-    // read each stream address row by row
+    // read each line from the camera file
+    std::string line;
     std::string stream_address;
+    std::string camera_name;
     unsigned int id = 0;
-    while (getline(camera_file, stream_address)) {
-        std::cout << "Read camera stream: " << stream_address << '\n';
+    while (getline(camera_file, line)) {
+        // read the comma separated camera info
+        std::stringstream line_stream(line);
+        std::getline(line_stream, camera_name, ',');
+        std::getline(line_stream, stream_address, ',');
+        std::cout << "Read camera with name: " << camera_name << " and stream: " << stream_address << '\n';
         cameras_.push_back(std::make_shared<Camera>(stream_address, id));
         id++;
     }
