@@ -6,7 +6,6 @@
 #include <utility>
 #include <memory>
 #include <vector>
-#include <experimental/filesystem>
 #include "rapidcsv.h"
 
 /**
