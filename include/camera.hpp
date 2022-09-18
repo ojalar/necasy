@@ -36,6 +36,10 @@ private:
         */ 
     unsigned int id_;
     /**
+        * Name of the directory used for recording frames.
+        */ 
+    std::string directory_name_;
+    /**
         * Latest frame.
         */ 
     cv::Mat frame_;

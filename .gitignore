@@ -1,3 +1,7 @@
+# Project related
+recordings/*
+*.swp
+
 # Prerequisites
 *.d
 
