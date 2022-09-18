@@ -13,14 +13,38 @@
 
 class Camera {
 public:
-    Camera(std::string stream, unsigned int id);
- 
+    Camera(std::string name, std::string stream, unsigned int id);
+    /**
+        * Capture a frame from the camera.
+        */ 
     void Capture();
+    /**
+        * Record the current frame.
+        */ 
     void Record();
 private:
+    /**
+        * Name of the camera.
+        */ 
+    std::string name_;
+    /**
+        * The stream address of the camera.
+        */ 
     std::string stream_;
+    /**
+        * ID of the camera.
+        */ 
     unsigned int id_;
+    /**
+        * Latest frame.
+        */ 
     cv::Mat frame_;
+    /**
+        * Timestamp of the latest frame.
+        */ 
     std::time_t frame_time_;
+    /**
+        * OpenCV capture stream for extracting frames from the camera.
+        */ 
     cv::VideoCapture cap_;
 };

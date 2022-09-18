@@ -1,1 +1,2 @@
+Name,Address
 camera_1,rtsp://rtsp.stream/pattern

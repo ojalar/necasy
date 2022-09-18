@@ -75,27 +75,53 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1eca91971b00239700f27630686ff667"><td class="memItemLeft" align="right" valign="top"><a id="a1eca91971b00239700f27630686ff667"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Necasy</b> (std::string camera_file=&quot;config/cameras.txt&quot;)</td></tr>
-<tr class="separator:a1eca91971b00239700f27630686ff667"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac91162192f66f3e584335adf7e0e707b"><td class="memItemLeft" align="right" valign="top"><a id="ac91162192f66f3e584335adf7e0e707b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Necasy</b> (const <a class="el" href="classNecasy.html">Necasy</a> &amp;ncs)</td></tr>
-<tr class="separator:ac91162192f66f3e584335adf7e0e707b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c0610d034d82a162eb7e8173b4116bb"><td class="memItemLeft" align="right" valign="top"><a id="a2c0610d034d82a162eb7e8173b4116bb"></a>
-<a class="el" href="classNecasy.html">Necasy</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classNecasy.html">Necasy</a> &amp;ncs)</td></tr>
-<tr class="separator:a2c0610d034d82a162eb7e8173b4116bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae023ff52c372884ce5124da00694794f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNecasy.html#ae023ff52c372884ce5124da00694794f">Necasy</a> (std::string camera_path=&quot;config/cameras.txt&quot;)</td></tr>
+<tr class="memdesc:ae023ff52c372884ce5124da00694794f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the class.  <a href="#ae023ff52c372884ce5124da00694794f">More...</a><br /></td></tr>
+<tr class="separator:ae023ff52c372884ce5124da00694794f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1523acb7e5c251135d4c726803cb1cae"><td class="memItemLeft" align="right" valign="top"><a id="a1523acb7e5c251135d4c726803cb1cae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="separator:a1523acb7e5c251135d4c726803cb1cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa16df6361c43dad3c0078e8490daf3e1"><td class="memItemLeft" align="right" valign="top"><a id="aa16df6361c43dad3c0078e8490daf3e1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Capture</b> ()</td></tr>
+<tr class="separator:aa16df6361c43dad3c0078e8490daf3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d07b83d0925ea2b64e19ecefebaf5b"><td class="memItemLeft" align="right" valign="top"><a id="ac0d07b83d0925ea2b64e19ecefebaf5b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Process</b> ()</td></tr>
+<tr class="separator:ac0d07b83d0925ea2b64e19ecefebaf5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main class for the system. </p>
-<p>This class implements the overall functionality of <a class="el" href="classNecasy.html" title="Main class for the system. ">Necasy</a>.</p>
+<p>Implements the overall functionality of <a class="el" href="classNecasy.html" title="Main class for the system. ">Necasy</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae023ff52c372884ce5124da00694794f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae023ff52c372884ce5124da00694794f">&#9670;&nbsp;</a></span>Necasy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Necasy::Necasy </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>camera_path</em> = <code>&quot;config/cameras.txt&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for the class. </p>
+<p>Create a <a class="el" href="classNecasy.html" title="Main class for the system. ">Necasy</a> object based on config file.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">camera_file</td><td>The path to the file listing the camera stream addresses </td></tr>
+    <tr><td class="paramname">camera_path</td><td>The path to the file listing the camera stream addresses </td></tr>
   </table>
   </dd>
 </dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="necasy_8hpp_source.html">necasy.hpp</a></li>
+<li>src/necasy.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

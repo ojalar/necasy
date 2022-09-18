@@ -1,0 +1,68 @@
+\hypertarget{structrapidcsv_1_1SeparatorParams}{}\section{rapidcsv\+:\+:Separator\+Params Struct Reference}
+\label{structrapidcsv_1_1SeparatorParams}\index{rapidcsv\+::\+Separator\+Params@{rapidcsv\+::\+Separator\+Params}}
+
+
+Datastructure holding parameters controlling how the C\+SV data fields are separated.  
+
+
+
+
+{\ttfamily \#include $<$rapidcsv.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structrapidcsv_1_1SeparatorParams_a663909f2406ab233f49f1edea25be505}{Separator\+Params} (const char p\+Separator=\textquotesingle{},\textquotesingle{}, const bool p\+Trim=false, const bool p\+Has\+CR=s\+Platform\+Has\+CR, const bool p\+Quoted\+Linebreaks=false, const bool p\+Auto\+Quote=true)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structrapidcsv_1_1SeparatorParams_a8231e02d3e6b917675f30071d39eaebb}\label{structrapidcsv_1_1SeparatorParams_a8231e02d3e6b917675f30071d39eaebb}} 
+char \hyperlink{structrapidcsv_1_1SeparatorParams_a8231e02d3e6b917675f30071d39eaebb}{m\+Separator}
+\begin{DoxyCompactList}\small\item\em specifies the column separator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrapidcsv_1_1SeparatorParams_a188b1488d2ef5f53e28b156dc9926695}\label{structrapidcsv_1_1SeparatorParams_a188b1488d2ef5f53e28b156dc9926695}} 
+bool \hyperlink{structrapidcsv_1_1SeparatorParams_a188b1488d2ef5f53e28b156dc9926695}{m\+Trim}
+\begin{DoxyCompactList}\small\item\em specifies whether to trim leading and trailing spaces from cells read. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrapidcsv_1_1SeparatorParams_a7f441773d773c69e1ed138164d3d1120}\label{structrapidcsv_1_1SeparatorParams_a7f441773d773c69e1ed138164d3d1120}} 
+bool \hyperlink{structrapidcsv_1_1SeparatorParams_a7f441773d773c69e1ed138164d3d1120}{m\+Has\+CR}
+\begin{DoxyCompactList}\small\item\em specifies whether new documents should use C\+R/\+LF instead of LF. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrapidcsv_1_1SeparatorParams_a0d4cdda7636deba424ed2312fe3c87e0}\label{structrapidcsv_1_1SeparatorParams_a0d4cdda7636deba424ed2312fe3c87e0}} 
+bool \hyperlink{structrapidcsv_1_1SeparatorParams_a0d4cdda7636deba424ed2312fe3c87e0}{m\+Quoted\+Linebreaks}
+\begin{DoxyCompactList}\small\item\em specifies whether to allow line breaks in quoted text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrapidcsv_1_1SeparatorParams_ae63043bd2471b4ab0c4af34ce042ac47}\label{structrapidcsv_1_1SeparatorParams_ae63043bd2471b4ab0c4af34ce042ac47}} 
+bool \hyperlink{structrapidcsv_1_1SeparatorParams_ae63043bd2471b4ab0c4af34ce042ac47}{m\+Auto\+Quote}
+\begin{DoxyCompactList}\small\item\em specifies whether to automatically dequote cell data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Datastructure holding parameters controlling how the C\+SV data fields are separated. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrapidcsv_1_1SeparatorParams_a663909f2406ab233f49f1edea25be505}\label{structrapidcsv_1_1SeparatorParams_a663909f2406ab233f49f1edea25be505}} 
+\index{rapidcsv\+::\+Separator\+Params@{rapidcsv\+::\+Separator\+Params}!Separator\+Params@{Separator\+Params}}
+\index{Separator\+Params@{Separator\+Params}!rapidcsv\+::\+Separator\+Params@{rapidcsv\+::\+Separator\+Params}}
+\subsubsection{\texorpdfstring{Separator\+Params()}{SeparatorParams()}}
+{\footnotesize\ttfamily rapidcsv\+::\+Separator\+Params\+::\+Separator\+Params (\begin{DoxyParamCaption}\item[{const char}]{p\+Separator = {\ttfamily \textquotesingle{},\textquotesingle{}},  }\item[{const bool}]{p\+Trim = {\ttfamily false},  }\item[{const bool}]{p\+Has\+CR = {\ttfamily sPlatformHasCR},  }\item[{const bool}]{p\+Quoted\+Linebreaks = {\ttfamily false},  }\item[{const bool}]{p\+Auto\+Quote = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Separator} & specifies the column separator (default \textquotesingle{},\textquotesingle{}). \\
+\hline
+{\em p\+Trim} & specifies whether to trim leading and trailing spaces from cells read (default false). \\
+\hline
+{\em p\+Has\+CR} & specifies whether a new document (i.\+e. not an existing document read) should use C\+R/\+LF instead of only LF (default is to use standard behavior of underlying platforms -\/ C\+R/\+LF for Win, and LF for others). \\
+\hline
+{\em p\+Quoted\+Linebreaks} & specifies whether to allow line breaks in quoted text (default false) \\
+\hline
+{\em p\+Auto\+Quote} & specifies whether to automatically dequote data during read, and add quotes during write (default true). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/rapidcsv.\+h\end{DoxyCompactItemize}

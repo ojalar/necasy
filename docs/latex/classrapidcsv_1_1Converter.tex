@@ -1,0 +1,129 @@
+\hypertarget{classrapidcsv_1_1Converter}{}\section{rapidcsv\+:\+:Converter$<$ T $>$ Class Template Reference}
+\label{classrapidcsv_1_1Converter}\index{rapidcsv\+::\+Converter$<$ T $>$@{rapidcsv\+::\+Converter$<$ T $>$}}
+
+
+Class providing conversion to/from numerical datatypes and strings. Only intended for rapidcsv internal usage, but exposed externally to allow specialization for custom datatype conversions.  
+
+
+
+
+{\ttfamily \#include $<$rapidcsv.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classrapidcsv_1_1Converter_a8f7de9557f32e24abb022bc9d52ae2e2}{Converter} (const \hyperlink{structrapidcsv_1_1ConverterParams}{Converter\+Params} \&p\+Converter\+Params)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classrapidcsv_1_1Converter_a114b87c39563c7777ad79fa8eb50c8e5}{To\+Str} (const T \&p\+Val, std\+::string \&p\+Str) const
+\begin{DoxyCompactList}\small\item\em Converts numerical value to string representation. \end{DoxyCompactList}\item 
+void \hyperlink{classrapidcsv_1_1Converter_a827c54e8cbe86cdb8e315d3382dfcbba}{To\+Val} (const std\+::string \&p\+Str, T \&p\+Val) const
+\begin{DoxyCompactList}\small\item\em Converts string holding a numerical value to numerical datatype representation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{classrapidcsv_1_1Converter_ae3c2d87f4e7cb9d09d4ecdd23419449c}{To\+Str} (const std\+::string \&p\+Val, std\+::string \&p\+Str) const
+\begin{DoxyCompactList}\small\item\em Specialized implementation handling string to string conversion. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{classrapidcsv_1_1Converter_aa038d308c460903344c0c2ebc5251537}{To\+Val} (const std\+::string \&p\+Str, std\+::string \&p\+Val) const
+\begin{DoxyCompactList}\small\item\em Specialized implementation handling string to string conversion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class rapidcsv\+::\+Converter$<$ T $>$}
+
+Class providing conversion to/from numerical datatypes and strings. Only intended for rapidcsv internal usage, but exposed externally to allow specialization for custom datatype conversions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrapidcsv_1_1Converter_a8f7de9557f32e24abb022bc9d52ae2e2}\label{classrapidcsv_1_1Converter_a8f7de9557f32e24abb022bc9d52ae2e2}} 
+\index{rapidcsv\+::\+Converter@{rapidcsv\+::\+Converter}!Converter@{Converter}}
+\index{Converter@{Converter}!rapidcsv\+::\+Converter@{rapidcsv\+::\+Converter}}
+\subsubsection{\texorpdfstring{Converter()}{Converter()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classrapidcsv_1_1Converter}{rapidcsv\+::\+Converter}$<$ T $>$\+::\hyperlink{classrapidcsv_1_1Converter}{Converter} (\begin{DoxyParamCaption}\item[{const \hyperlink{structrapidcsv_1_1ConverterParams}{Converter\+Params} \&}]{p\+Converter\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Converter\+Params} & specifies how conversion of non-\/numerical values to numerical datatype shall be handled. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classrapidcsv_1_1Converter_a114b87c39563c7777ad79fa8eb50c8e5}\label{classrapidcsv_1_1Converter_a114b87c39563c7777ad79fa8eb50c8e5}} 
+\index{rapidcsv\+::\+Converter@{rapidcsv\+::\+Converter}!To\+Str@{To\+Str}}
+\index{To\+Str@{To\+Str}!rapidcsv\+::\+Converter@{rapidcsv\+::\+Converter}}
+\subsubsection{\texorpdfstring{To\+Str()}{ToStr()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \hyperlink{classrapidcsv_1_1Converter}{rapidcsv\+::\+Converter}$<$ T $>$\+::To\+Str (\begin{DoxyParamCaption}\item[{const T \&}]{p\+Val,  }\item[{std\+::string \&}]{p\+Str }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Converts numerical value to string representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Val} & numerical value \\
+\hline
+{\em p\+Str} & output string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1Converter_ae3c2d87f4e7cb9d09d4ecdd23419449c}\label{classrapidcsv_1_1Converter_ae3c2d87f4e7cb9d09d4ecdd23419449c}} 
+\index{rapidcsv\+::\+Converter@{rapidcsv\+::\+Converter}!To\+Str@{To\+Str}}
+\index{To\+Str@{To\+Str}!rapidcsv\+::\+Converter@{rapidcsv\+::\+Converter}}
+\subsubsection{\texorpdfstring{To\+Str()}{ToStr()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void \hyperlink{classrapidcsv_1_1Converter}{rapidcsv\+::\+Converter}$<$ std\+::string $>$\+::To\+Str (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Val,  }\item[{std\+::string \&}]{p\+Str }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Specialized implementation handling string to string conversion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Val} & string \\
+\hline
+{\em p\+Str} & string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1Converter_a827c54e8cbe86cdb8e315d3382dfcbba}\label{classrapidcsv_1_1Converter_a827c54e8cbe86cdb8e315d3382dfcbba}} 
+\index{rapidcsv\+::\+Converter@{rapidcsv\+::\+Converter}!To\+Val@{To\+Val}}
+\index{To\+Val@{To\+Val}!rapidcsv\+::\+Converter@{rapidcsv\+::\+Converter}}
+\subsubsection{\texorpdfstring{To\+Val()}{ToVal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \hyperlink{classrapidcsv_1_1Converter}{rapidcsv\+::\+Converter}$<$ T $>$\+::To\+Val (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Str,  }\item[{T \&}]{p\+Val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Converts string holding a numerical value to numerical datatype representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Val} & numerical value \\
+\hline
+{\em p\+Str} & output string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1Converter_aa038d308c460903344c0c2ebc5251537}\label{classrapidcsv_1_1Converter_aa038d308c460903344c0c2ebc5251537}} 
+\index{rapidcsv\+::\+Converter@{rapidcsv\+::\+Converter}!To\+Val@{To\+Val}}
+\index{To\+Val@{To\+Val}!rapidcsv\+::\+Converter@{rapidcsv\+::\+Converter}}
+\subsubsection{\texorpdfstring{To\+Val()}{ToVal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void \hyperlink{classrapidcsv_1_1Converter}{rapidcsv\+::\+Converter}$<$ std\+::string $>$\+::To\+Val (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Str,  }\item[{std\+::string \&}]{p\+Val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Specialized implementation handling string to string conversion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Val} & string \\
+\hline
+{\em p\+Str} & string \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/rapidcsv.\+h\end{DoxyCompactItemize}

@@ -12,29 +12,45 @@ Main class for the system.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classNecasy_a1eca91971b00239700f27630686ff667}\label{classNecasy_a1eca91971b00239700f27630686ff667}} 
-{\bfseries Necasy} (std\+::string camera\+\_\+file=\char`\"{}config/cameras.\+txt\char`\"{})
+\hyperlink{classNecasy_ae023ff52c372884ce5124da00694794f}{Necasy} (std\+::string camera\+\_\+path=\char`\"{}config/cameras.\+txt\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor for the class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNecasy_a1523acb7e5c251135d4c726803cb1cae}\label{classNecasy_a1523acb7e5c251135d4c726803cb1cae}} 
+void {\bfseries Update} ()
 \item 
-\mbox{\Hypertarget{classNecasy_ac91162192f66f3e584335adf7e0e707b}\label{classNecasy_ac91162192f66f3e584335adf7e0e707b}} 
-{\bfseries Necasy} (const \hyperlink{classNecasy}{Necasy} \&ncs)
+\mbox{\Hypertarget{classNecasy_aa16df6361c43dad3c0078e8490daf3e1}\label{classNecasy_aa16df6361c43dad3c0078e8490daf3e1}} 
+void {\bfseries Capture} ()
 \item 
-\mbox{\Hypertarget{classNecasy_a2c0610d034d82a162eb7e8173b4116bb}\label{classNecasy_a2c0610d034d82a162eb7e8173b4116bb}} 
-\hyperlink{classNecasy}{Necasy} \& {\bfseries operator=} (const \hyperlink{classNecasy}{Necasy} \&ncs)
+\mbox{\Hypertarget{classNecasy_ac0d07b83d0925ea2b64e19ecefebaf5b}\label{classNecasy_ac0d07b83d0925ea2b64e19ecefebaf5b}} 
+void {\bfseries Process} ()
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Main class for the system. 
 
-This class implements the overall functionality of \hyperlink{classNecasy}{Necasy}.
+Implements the overall functionality of \hyperlink{classNecasy}{Necasy}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNecasy_ae023ff52c372884ce5124da00694794f}\label{classNecasy_ae023ff52c372884ce5124da00694794f}} 
+\index{Necasy@{Necasy}!Necasy@{Necasy}}
+\index{Necasy@{Necasy}!Necasy@{Necasy}}
+\subsubsection{\texorpdfstring{Necasy()}{Necasy()}}
+{\footnotesize\ttfamily Necasy\+::\+Necasy (\begin{DoxyParamCaption}\item[{std\+::string}]{camera\+\_\+path = {\ttfamily \char`\"{}config/cameras.txt\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructor for the class. 
+
+Create a \hyperlink{classNecasy}{Necasy} object based on config file.
 
 
 \begin{DoxyParams}{Parameters}
-{\em camera\+\_\+file} & The path to the file listing the camera stream addresses \\
+{\em camera\+\_\+path} & The path to the file listing the camera stream addresses \\
 \hline
 \end{DoxyParams}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/necasy.\+hpp\end{DoxyCompactItemize}
+include/necasy.\+hpp\item 
+src/necasy.\+cpp\end{DoxyCompactItemize}

@@ -2,29 +2,21 @@
 
 Necasy::Necasy(std::string camera_path)
 : camera_path_(camera_path) {
-    // read camera stream addresses from config file
+    // read camera info from config file
     std::cout << "Reading camera streams: " << camera_path_ << '\n';
-    std::ifstream camera_file;
-    camera_file.open(camera_path_);
-    // check if file was succesfully opened 
-    if (!camera_file) {
-        std::cerr << "Could not read camera stream file\n";
-    }
-    // read each line from the camera file
-    std::string line;
-    std::string stream_address;
+    rapidcsv::Document camera_file(camera_path_);
+    std::vector<std::string> names = camera_file.GetColumn<std::string>("Name");
+    std::vector<std::string> addresses = camera_file.GetColumn<std::string>("Address");
     std::string camera_name;
-    unsigned int id = 0;
-    while (getline(camera_file, line)) {
+    std::string stream_address;
+
+    for(unsigned int i = 0; i < names.size(); i++) {
         // read the comma separated camera info
-        std::stringstream line_stream(line);
-        std::getline(line_stream, camera_name, ',');
-        std::getline(line_stream, stream_address, ',');
+        camera_name = names[i];
+        stream_address = addresses[i];
         std::cout << "Read camera with name: " << camera_name << " and stream: " << stream_address << '\n';
-        cameras_.push_back(std::make_shared<Camera>(stream_address, id));
-        id++;
+        cameras_.push_back(std::make_shared<Camera>(camera_name, stream_address, i));
     }
-    camera_file.close();  
 }
 
 void Necasy::Update() {

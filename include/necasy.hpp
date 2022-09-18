@@ -7,6 +7,7 @@
 #include <memory>
 #include <vector>
 #include <experimental/filesystem>
+#include "rapidcsv.h"
 
 /**
     * \brief Main class for the system.
@@ -36,8 +37,17 @@ public:
     // destructor
     ~Necasy() {};
     */
+    /**
+        * Update the status of the system.
+        */
     void Update();
+    /**
+        * Captured frames from all connected cameras.
+        */
     void Capture();
+    /**
+        * Process latest frames from the cameras.
+        */
     void Process() {;};
 
 private:
